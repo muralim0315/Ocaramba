@@ -51,6 +51,7 @@ namespace Ocaramba.Tests.NUnit.Tests
         [TestCaseSource(typeof(CompareFiles), "GetCsvFileToCompare")]
         public void CompareCsvFiles(string liveFiles, string testFiles)
         {
+            //This is first change
             var folder = ProjectBaseConfiguration.DownloadFolderPath;
             if (!File.Exists(folder + this.separator + testFiles))
             {
@@ -85,6 +86,7 @@ namespace Ocaramba.Tests.NUnit.Tests
                 this.logger.Info(ProjectBaseConfiguration.DownloadFolderPath + liveFiles);
                 this.logger.Error("Missing file:\n{0}{1}", folder, testFiles);
                 Assert.True(false, "File does not exist");
+                //This is second change
             }
 
             ////Implement here methods for comparing files
@@ -95,5 +97,7 @@ namespace Ocaramba.Tests.NUnit.Tests
 
             this.logger.Info("Files are identical");
         }
+
+        //This is third change
     }
 }
