@@ -11,6 +11,7 @@ namespace Ocaramba.UnitTests.Tests
         [Test]
         public void IdLocatorTest()
         {
+            //Pull reques test
             var columnAText = new InternetPage(DriverContext)
                 .OpenHomePage()
                 .GoToDragAndDropPage()
